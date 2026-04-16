@@ -22,7 +22,11 @@ function routeAfterReview(state) {
     return END;
 }
 
-
+async function nonCodingNode(state) {
+    return {
+        finalMessage: "This assitant is built for coding and software development related questions. Feel free to ask any coding related question!"
+    }
+}
 
 export const buildSoftwareAssistantGraph = () => {
     const graph = new StateGraph({
@@ -45,6 +49,7 @@ export const buildSoftwareAssistantGraph = () => {
         .addNode("tester", testAgent)
         .addNode("documenter", documentorAgent)
         .addNode("reviewer", reviewerAgent)
+        .addNode("nonCoding", nonCodingNode)
         .addEdge(START, "classifier")
         .addConditionalEdges("classifier", routeAfterClassification)
         .addEdge("planner", "coder")
