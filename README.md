@@ -1,5 +1,8 @@
 # React Multi-Agent Copilot
 
+<img width="1862" height="891" alt="image" src="https://github.com/user-attachments/assets/a9b714c6-bf1b-4959-a594-dca1314e2da9" />
+
+
 A full-stack code assistant built with React, Express, and LangChain's LangGraph. This project demonstrates a multi-agent pipeline for software assistance, including classification, planning, coding, testing, documenting, and review.
 
 ## Project Structure
